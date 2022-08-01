@@ -34,7 +34,7 @@ Site <a href="https://isaaclouzeiro.dev.br" target="_blank">isaaclouzeiro.dev.br
 
 ### -- Sobre
 
-#### Meu portifolio web, com o objetivo de divulgar meu trabalho como Desenvolvedor Front-end. Versão 3.0. COPIA, Para não comprometer dados sensíveis.
+#### Meu portifolio web, com o objetivo de divulgar meu trabalho como Desenvolvedor Front-end. Versão 3.0. COPIA, para não comprometer dados sensíveis.
 
 ### -- Tecnologias
 
