@@ -137,6 +137,15 @@ export default {
             height: auto;
             position: absolute;
         }
+
+        @media screen and (max-height: 400px) {
+            #largeContainer {
+                display: none!important;
+            }
+            #mobileContainer {
+                display: block!important;
+            }
+        }
     }
 
     // all buttons

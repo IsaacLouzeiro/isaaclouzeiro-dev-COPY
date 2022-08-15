@@ -5,20 +5,28 @@
             <ul class="myProjects nav justify-content-between">
                 <li v-for="(proj, index) in workProjects" :key="index" class="px-2 pt-2 me-1">
                     <div class="headerProjects d-flex justify-content-between">
-                        <a :href="proj.link" target="_blank" class="projectName"><font-awesome-icon icon="fa-solid fa-link" /> {{ proj.title }}</a>
+                        <a :href="proj.link" target="_blank" class="projectName">
+                            {{ proj.title }}
+                        </a>
 
-                        <a :href="proj.github" target="_blank" class="projectGit"><font-awesome-icon icon="fa-brands fa-github" /></a>
+                        <a :href="proj.github" target="_blank" class="projectGit">
+                            <font-awesome-icon icon="fa-brands fa-github" />
+                        </a>
                     </div>
-                    <div class="centerSpace"></div>
-                    <div class="mainProjects d-flex align-self-center w-100">
+                    
+                    <div class="centerSpace">
+                    </div>
+
+                    <a :href="proj.link" target="_blank" class="mainProjects d-flex align-self-center w-100">
                         <img :src="proj.img" :alt="proj.title">
-                    </div>
+                        <font-awesome-icon icon="fa-solid fa-link" />
+                    </a>
                 </li>
             </ul>
 
             <div class="d-flex align-items-center justify-content-between boxBtnProjects">
                 <a :href="btn.link" v-for="(btn, index) in workBtn" :key="index" class="btn mt-3" target="_blank">
-                    <font-awesome-icon :icon="btn.icon"/>
+                    <font-awesome-icon :icon="btn.icon" />
                      <span class="d-none d-sm-inline ps-2">{{ btn.text }}</span><span class="d-inline d-sm-none ps-2">{{ btn.minText }}</span>
                 </a>
             </div>
@@ -43,7 +51,6 @@ export default {
     
     #work {
         width: 100%;
-        // height: 100%;
     }
 
     h2 {
@@ -63,12 +70,15 @@ export default {
             .headerProjects {
                 .projectName {
                     color: $color-d-2;
-                    font-size: 1.1em;
+                    font-size: 1.2em;
                     text-decoration: none;
+                    margin-left: .3em;
                 }
                 .projectGit {
                     color: $color-d-1;
-                    font-size: 1.4em;
+                    font-size: 2em;
+                    position: relative;
+                    bottom: .3em;
                 }
             }
 
@@ -81,9 +91,31 @@ export default {
                 top: 2.4em;
                 left: 0;
                 right: 0;
+                
+                * {
+                    transition: all .2s ease-in;
+                }
 
                 img {
                     width: 100%;
+                }
+
+                svg {
+                    position: absolute;
+                    left: 0; 
+                    right: 0; 
+                    bottom: 0; 
+                    top: 0; 
+                    margin: auto; 
+                    font-size: 3em;
+                    color: $color-l-1;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    svg {
+                        opacity: 1;
+                    }
                 }
             }
 
@@ -111,6 +143,12 @@ export default {
         .btn {
             background-color: $color-d-2;
             color: $color-l-1;
+
+            svg {
+                @media only screen and (max-width: 350px) {
+                    display: none ;
+                }
+            }
         }
     }
 </style>

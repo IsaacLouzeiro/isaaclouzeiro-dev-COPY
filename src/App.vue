@@ -26,6 +26,7 @@
             :contactForm="contactForm"
             :contactBtn="contactBtn"
             :contactSocial="contactSocial"
+            :contactAlert="contactAlert"
         />
     </div>
 </template>
@@ -64,7 +65,8 @@ export default {
             contactTitle: '',
             contactForm: {},
             contactBtn: '',
-            contactSocial: []
+            contactSocial: [],
+            contactAlert: []
         }
     },
 
@@ -129,13 +131,13 @@ export default {
                 },
                 { 
                     name: 'Technical Course, Systems Development', 
-                    institute: 'Public Technical School Professor Basilídes de Godoy', 
+                    institute: 'State Technical School Professor Basilídes de Godoy', 
                     in: '07/2019', 
                     out: '12/2020' 
                 }
             ]
             this.aboutEducationBtn = ['https://linkedin.com/in/isaac-louzeiro', 'See more']
-            this.aboutSkills = [ 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Sass', 'Vue', 'SPA', 'Wordpress', 'SEO', 'NPM', 'Git', 'Github', 'Adobe XD', 'Figma', 'Scrum', 'Trello' ]
+            this.aboutSkills = [ 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Sass', 'Vue', 'Wordpress', 'UI/UX', 'SPA', 'SEO', 'Git', 'Github', 'Adobe XD', 'Figma', 'Scrum' ]
         
         
             // my work content
@@ -188,13 +190,13 @@ export default {
                 {
                     icon: 'fa-brands fa-codepen',
                     text: 'Codepen Projects',
-                    minText: 'Codepen',
+                    minText: 'Codepen Proj.',
                     link: 'https://codepen.io/isaaclouzeiro'
                 },
                 {
                     icon: 'fa-brands fa-github',
                     text: 'Github Projects',
-                    minText: 'Github',
+                    minText: 'Github Proj.',
                     link: 'https://github.com/IsaacLouzeiro'
                 }
             ]
@@ -231,6 +233,21 @@ export default {
                     link: 'https://instagram.com/isaac.louzeiro',
                     editLink: 'instagram.com/isaac.louzeiro',
                     icon: 'fa-brands fa-instagram'
+                }
+            ]
+            this.contactAlert = [
+                {
+                    nameAlert: 'ENTER YOUR NAME*',
+                    emailAlert: 'ENTER YOUR E-MAIL*',
+                    messageAlert: 'ENTER YOUR MESSAGE*',
+
+                    contAlert: {
+                        errorAlert: 'There was an error completing the form',
+                        errorAlertIcon: 'fa-solid fa-triangle-exclamation',
+                        successAlert: 'Message was sent successfully',
+                        successAlertIcon: 'fa-solid fa-circle-check'
+
+                    }
                 }
             ]
         },
@@ -279,8 +296,8 @@ export default {
             this.aboutTitle = 'Sobre'
 
             this.aboutText = [
-                "Olá! Me chamo Isaac, sou apaixonado pela área de Desenvolbimento Web, principalmente na parte de Front-end.",
-                "Gosto de aprender sobre o assunto, e principalmente mostrar na prática tudo o que sei nesta área, adicionando no meu Github, Codepen e Portfolio Web.",
+                "Olá! Me chamo Isaac, sou apaixonado pela área de Desenvolvimento Web, principalmente na parte de Front-end.",
+                "Gosto de aprender sobre o assunto, e mostrar na prática tudo o que sei nesta área, adicionando no meu Github, Codepen e Portfolio Web.",
                 "Sou uma pessoa bastante curiosa, que gosta de aprender e expandir meus conhecimentos. A cada dia tento melhorar minhas habilidades para que eu possa crescer profissionalmente."
             ]
 
@@ -352,13 +369,13 @@ export default {
                 {
                     icon: 'fa-brands fa-codepen',
                     text: 'Projetos no Codepen',
-                    minText: 'Codepen',
+                    minText: 'Proj. Codepen',
                     link: 'https://codepen.io/isaaclouzeiro'
                 },
                 {
                     icon: 'fa-brands fa-github',
                     text: 'Projetos no Github',
-                    minText: 'Github',
+                    minText: 'Proj. Github',
                     link: 'https://github.com/IsaacLouzeiro'
                 }
             ]
@@ -395,6 +412,21 @@ export default {
                     link: 'https://instagram.com/isaac.louzeiro',
                     editLink: 'instagram.com/isaac.louzeiro',
                     icon: 'fa-brands fa-instagram'
+                }
+            ]
+            this.contactAlert = [
+                {
+                    nameAlert: 'INSIRA SEU NOME*',
+                    emailAlert: 'INSIRA SEU E-MAIL*',
+                    messageAlert: 'INSIRA SUA MENSAGEM*',
+
+                    contAlert: {
+                        errorAlert: 'Ocorreu um erro ao concluir o formulário',
+                        errorAlertIcon: 'fa-solid fa-triangle-exclamation',
+                        successAlert: 'Mensagem enviada com sucesso',
+                        successAlertIcon: 'fa-solid fa-circle-check'
+
+                    }
                 }
             ]
         }

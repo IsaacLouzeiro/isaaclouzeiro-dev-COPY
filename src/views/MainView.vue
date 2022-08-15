@@ -24,6 +24,7 @@
             :contactForm="contactForm"
             :contactBtn="contactBtn"
             :contactSocial="contactSocial"
+            :contactAlert="contactAlert"
         />
     </div>
 </template>
@@ -56,7 +57,8 @@ export default {
         contactTitle: String,
         contactForm: Object,
         contactBtn: String,
-        contactSocial: Array
+        contactSocial: Array,
+        contactAlert: Array
     },
     components: {
     HomeContent,
