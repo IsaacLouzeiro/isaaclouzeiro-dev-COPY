@@ -33,7 +33,6 @@
 
 <script>
 import NavbarContent from '@/components/NavbarContent.vue'
-
 export default {
     name: 'App',
     data() {
@@ -42,12 +41,10 @@ export default {
             language: [],
             changeLang: '',
             navBar: [],
-
             // home content
             homeText: [],
             homeButtons: [],
             homeIsaac: [],
-
             // about content
             aboutTitle: '',
             aboutText: [],
@@ -55,12 +52,10 @@ export default {
             aboutEducation: [ { name: '', institute: '', in: '', out: '' } ],
             aboutEducationBtn: [],
             aboutSkills: [],
-
             // my work content
             workTitle: '',
             workProjects: [],
             workBtn: [],
-
             // contact content
             contactTitle: '',
             contactForm: {},
@@ -69,7 +64,6 @@ export default {
             contactAlert: []
         }
     },
-
     // translation config
     methods: {
         english() {
@@ -78,25 +72,22 @@ export default {
                 { showName: 'English', name: 'English', isCheck: true },
                 { showName: 'Portuguese', name: 'Portuguese', isCheck: false }
             ]
-
             this.navBar = [
                 'Home',
                 'About',
                 'My Work',
                 'Contact'
             ]
-
             // home content
             this.homeText = [ 
                 "Welcome to my website.",
                 "Recently my passion is creating websites. I'm very curious and constantly searching for new things to learn."
             ]
-
             this.homeButtons = [
                 {
                     name: 'Web Resume',
                     icon: 'fa-solid fa-window-maximize',
-                    link: 'https://isaac-resume.web.app/'
+                    link: 'https://resume-curriculo.netlify.app'
                 },
                 {
                     name: 'Codepen',
@@ -109,25 +100,27 @@ export default {
                     link: 'https://github.com/IsaacLouzeiro'
                 }
             ]
-
-            this.homeIsaac = ['Isaac Louzeiro', 'Front-End Web Developer']
-
+            this.homeIsaac = ['Isaac Louzeiro', 'Web Developer']
             // about content
             this.aboutTitle = 'About'
-
             this.aboutText = [
-                "Hi! My name is Isaac, I'm passionate about Web Development, especially the Front-End area.",
-                "I like to learn about this subject, and show my skills in this area, putting it on my Github, Codepen, and Web Portfolio.",
+                "Hi! My name is Isaac, I'm passionate about Web Development.",
+                "I like to learn about this subject, and show my skills in this area, by posting them on my Github, Codepen, and Web Portfolio.",
                 "I am a very curious person, who likes to learn and expand my knowledge. Every day I try to improve my skills so that I can grow professionally."
             ]
-
             this.aboutEducationTitle = 'Education'
             this.aboutEducation = [ 
                 { 
-                    name: 'Vocational Course, Java Web Programing', 
+                    name: 'Technology Degree, Information Technology Management', 
+                    institute: 'College of Technology of Franco da Rocha', 
+                    in: '02/2023', 
+                    out: '12/2025' 
+                },
+                { 
+                    name: 'Vocational Course, FullStack Web Programming', 
                     institute: 'Instituto Proa / Senac', 
-                    in: '07/2021', 
-                    out: '12/2021' 
+                    in: '03/2021', 
+                    out: '07/2021' 
                 },
                 { 
                     name: 'Technical Course, Systems Development', 
@@ -162,7 +155,7 @@ export default {
                     github: 'https://github.com/IsaacLouzeiro/economie',
                     link: 'https://economie-dinie.github.io/economie/resumo.html',
                     img: require("@/assets/img/projects/economie.png"),
-                    about: 'Website focused on helping young and adult people to organize financially, in a friendly way. Demoday work project of the Proa Institute 4.0 in Web Java Programming in 2021.'
+                    about: 'Website focused on helping young and adult people to organize financially, in a friendly way. Demoday work project of the Proa Institute 4.0 in FullStack Web Programming in 2021.'
                 },
                 {
                     title: 'Leandro Louzeiro',
@@ -181,7 +174,7 @@ export default {
                 {
                     title: 'Resume',
                     github: 'https://github.com/IsaacLouzeiro/resume',
-                    link: 'https://isaac-resume.web.app/',
+                    link: 'https://resume-curriculo.netlify.app',
                     img: require("@/assets/img/projects/resume.png"),
                     about: 'Web resume, a relaxed way of show my professional side.'
                 }
@@ -200,7 +193,6 @@ export default {
                     link: 'https://github.com/IsaacLouzeiro'
                 }
             ]
-
             // contact content
             this.contactTitle = 'Contact'
             this.contactForm = {
@@ -240,18 +232,15 @@ export default {
                     nameAlert: 'ENTER YOUR NAME*',
                     emailAlert: 'ENTER YOUR E-MAIL*',
                     messageAlert: 'ENTER YOUR MESSAGE*',
-
                     contAlert: {
                         errorAlert: 'There was an error completing the form',
                         errorAlertIcon: 'fa-solid fa-triangle-exclamation',
                         successAlert: 'Message was sent successfully',
                         successAlertIcon: 'fa-solid fa-circle-check'
-
                     }
                 }
             ]
         },
-
         portuguese() {
             // navbar content
             this.language = [
@@ -265,18 +254,16 @@ export default {
                 'Meus Trabalhos',
                 'Contato'
             ]
-
             // home content
             this.homeText = [ 
                 "Bem vindo ao meu site.",
                 "Recentemente minha paixão é criar sites. Eu sou bastante curioso e estou constantemente procurando coisas novas para aprender."
             ]
-
             this.homeButtons = [
                 {
                     name: 'Currículo Web',
                     icon: 'fa-solid fa-window-maximize',
-                    link: 'https://isaac-resume.web.app/'
+                    link: 'https://resume-curriculo.netlify.app'
                 },
                 {
                     name: 'Codepen',
@@ -289,25 +276,27 @@ export default {
                     link: 'https://github.com/IsaacLouzeiro'
                 }
             ]
-
-            this.homeIsaac = ['Isaac Louzeiro', 'Desenvolvedor Web Front-End']
-
+            this.homeIsaac = ['Isaac Louzeiro', 'Desenvolvedor Web']
             // about content
             this.aboutTitle = 'Sobre'
-
             this.aboutText = [
-                "Olá! Me chamo Isaac, sou apaixonado pela área de Desenvolvimento Web, principalmente na parte de Front-end.",
-                "Gosto de aprender sobre o assunto, e mostrar na prática tudo o que sei nesta área, adicionando no meu Github, Codepen e Portfolio Web.",
+                "Olá! Me chamo Isaac, sou apaixonado pela área de Desenvolvimento Web.",
+                "Gosto de aprender sobre o assunto, e mostrar na prática tudo o que sei nesta área, postando no meu Github, Codepen e Portfolio Web.",
                 "Sou uma pessoa bastante curiosa, que gosta de aprender e expandir meus conhecimentos. A cada dia tento melhorar minhas habilidades para que eu possa crescer profissionalmente."
             ]
-
             this.aboutEducationTitle = 'Educação'
             this.aboutEducation = [ 
                 { 
-                    name: 'Curso Profissionalizante, Programação Web Java', 
+                    name: 'Tecnólogo, Information Technology Management', 
+                    institute: 'Faculdade de Tecnologia de Franco da Rocha', 
+                    in: '02/2023', 
+                    out: '12/2025' 
+                },
+                { 
+                    name: 'Curso Profissionalizante, Programação Web FullStack', 
                     institute: 'Instituto Proa / Senac', 
-                    in: '07/2021', 
-                    out: '12/2021' 
+                    in: '03/2021', 
+                    out: '07/2021' 
                 },
                 { 
                     name: 'Curso Técnico, Desenvolvimento de Sistemas', 
@@ -341,7 +330,7 @@ export default {
                     github: 'https://github.com/IsaacLouzeiro/economie',
                     link: 'https://economie-dinie.github.io/economie/resumo.html',
                     img: require("@/assets/img/projects/economie.png"),
-                    about: 'Site voltado a ajudar jovens e adultos a se organizar financeiramente, de uma maneira amigável. Projeto final Demoday do curso de Programação Java Web do Instituto Proa em 2021.'
+                    about: 'Site voltado a ajudar jovens e adultos a se organizar financeiramente, de uma maneira amigável. Projeto final Demoday do curso de Programação Web FullStack do Instituto Proa em 2021.'
                 },
                 {
                     title: 'Leandro Louzeiro',
@@ -360,7 +349,7 @@ export default {
                 {
                     title: 'Resume',
                     github: 'https://github.com/IsaacLouzeiro/resume',
-                    link: 'https://isaac-resume.web.app/',
+                    link: 'https://resume-curriculo.netlify.app',
                     img: require("@/assets/img/projects/resume.png"),
                     about: 'Currículo Web, uma forma descontraída de mostrar meu lado profissional.'
                 }
@@ -379,7 +368,6 @@ export default {
                     link: 'https://github.com/IsaacLouzeiro'
                 }
             ]
-
             // contact content
             this.contactTitle = 'Contato'
             this.contactForm = {
@@ -419,13 +407,11 @@ export default {
                     nameAlert: 'INSIRA SEU NOME*',
                     emailAlert: 'INSIRA SEU E-MAIL*',
                     messageAlert: 'INSIRA SUA MENSAGEM*',
-
                     contAlert: {
                         errorAlert: 'Ocorreu um erro ao concluir o formulário',
                         errorAlertIcon: 'fa-solid fa-triangle-exclamation',
                         successAlert: 'Mensagem enviada com sucesso',
                         successAlertIcon: 'fa-solid fa-circle-check'
-
                     }
                 }
             ]
@@ -456,27 +442,21 @@ export default {
     
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); // ubuntu font
     @import '@/assets/colors/colors.scss'; // colors
-
     .gradient { background-image: linear-gradient(to bottom right, $color-d-2, $color-l-2); background-attachment: fixed; } // main gradient
-
     a { &:hover { text-decoration: none; opacity: .7 } }; // link hover
     ul { list-style-type: none; } // list without style type
     .btn, button, input { &:focus, &:hover { border-color: rgba(0,0,0,0); outline: none; } } // removing outline
-
     * { // space and font
         margin: 0;
         padding: 0;
         font-family: 'Ubuntu', 'Trebuchet MS', sans-serif;
         box-sizing: border-box;
     }
-
     html, body, #app { width: 100%; height: 100%;  }
-
     html, body {
         box-sizing: content-box;
         overflow-y: auto;
     }
-
     #app {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -488,5 +468,4 @@ export default {
         scrollbar-color: $color-d-2 rgba($color-l-1, .4);
         scrollbar-width: thin;
     }
-
 </style>
