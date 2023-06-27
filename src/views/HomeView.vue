@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
@@ -6,3 +7,7 @@
     <h1>Aoba</h1>
   </main>
 </template>
+
+<style lang="scss">
+
+</style>

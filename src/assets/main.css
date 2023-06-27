@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
+}
+
+.gradient {
+  background-image: linear-gradient(to bottom right, #004B63, #30B8B2);
+  background-attachment: fixed;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.btn:focus, .btn:hover, button:focus, button:hover, input:focus, input:hover {
+  border-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(232, 232, 230, 0.4);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #004B63;
+  border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 75, 99, 0.8);
+}
+
+/*# sourceMappingURL=main.css.map */

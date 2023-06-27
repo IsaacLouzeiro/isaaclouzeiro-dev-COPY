@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import '../assets/colors.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
+}
+
+.gradient { background-image: linear-gradient(to bottom right, $color-d-2, $color-l-2); background-attachment: fixed; } // main gradient
+
+a { &:hover { text-decoration: none; opacity: .7 } }; // link hover
+
+ul { list-style-type: none; } // list without style type
+
+.btn, button, input { &:focus, &:hover { border-color: rgba(0,0,0,0); outline: none; } } // removing outline
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba($color-l-1, .4);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-d-2;
+  border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color-d-2, .8);
+}
