@@ -8,7 +8,13 @@
   font-family: Ubuntu, sans-serif;
 }
 
-.gradient { background-image: linear-gradient(to bottom right, $color-d-2, $color-l-2); background-attachment: fixed; } // main gradient
+html, body, #app {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+}
+
+.gradient { background-image: linear-gradient(to bottom, $color-l-2, $color-d-2); background-attachment: fixed; } // main gradient
 
 a { &:hover { text-decoration: none; opacity: .7 } }; // link hover
 
