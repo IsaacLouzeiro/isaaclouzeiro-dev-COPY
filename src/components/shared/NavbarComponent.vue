@@ -1,5 +1,6 @@
 <script setup lang="ts">
   interface NavItem {
+    target: string;
     icon: string; 
     name: string;
   }
@@ -26,7 +27,7 @@
         :key="index"
         class="nav-item"
       >
-        <a :href="`#${item.name}`" class="btn">
+        <a :href="`#${item.target}`" class="btn">
           <font-awesome-icon :icon="`fa-solid ${item.icon}`" />
         </a>
 
@@ -54,7 +55,7 @@
             v-for="(item, index) in navItems"
             :key="index"
             class="nav-item"
-          ><a :href="`#${item.name}`" class="nav-link"><font-awesome-icon :icon="`fa-solid ${item.icon}`" />{{ item.name }}</a></li>
+          ><a :href="`#${item.target}`" class="nav-link"><font-awesome-icon :icon="`fa-solid ${item.icon}`" />{{ item.name }}</a></li>
         </ul>
       </div>
     </div>

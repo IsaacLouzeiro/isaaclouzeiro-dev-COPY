@@ -3,25 +3,30 @@
 import { RouterView } from 'vue-router'
   import NavbarComponent from './components/shared/NavbarComponent.vue'
 
-  type NavType = {
+  interface NavType {
+    target: string;
     icon: string;
     name: string;
   }
 
   const navItems = ref<NavType[]>([
     {
+      target: "home",
       icon: "fa-house-chimney",
       name: "Home"
     },
     {
+      target: "about",
       icon: "fa-book-open-reader",
       name: "About"
     },
     {
+      target: "work",
       icon: "fa-code",
       name: "Work"
     },
     {
+      target: "contact",
       icon: "fa-envelope",
       name: "Contact"
     }
