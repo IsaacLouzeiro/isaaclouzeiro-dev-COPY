@@ -1,8 +1,9 @@
 <script setup lang="ts">
   defineProps({
     link: String,
+    icontType: String,
     icon: String,
-    name: String
+    name: String,
   })
 </script>
 
@@ -12,7 +13,7 @@
     target="_blank"
     class="btn py-2"
   >
-    <font-awesome-icon :icon="`fa-solid ${icon}`" />{{ name }}
+    <font-awesome-icon :icon="`fa-${icontType} ${icon}`" />{{ name }}
   </a>
 </template>
 
