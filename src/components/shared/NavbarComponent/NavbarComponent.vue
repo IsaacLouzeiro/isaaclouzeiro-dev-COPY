@@ -19,7 +19,7 @@ import ButtonNavbarComponent from './ButtonNavbarComponent.vue';
   <nav class="d-flex flex-column align-items-center justify-content-between h-100 py-3 mx-md-2 mx-0">
     <!-- link with logo -->
     <router-link to="/" class="d-none d-sm-inline-block">
-      <img src="../../assets/img/logo.png" alt="Logo" class="img-fluid">
+      <img src="../../../assets/img/logo.png" alt="Logo" class="img-fluid">
     </router-link>
 
     <!-- navbar -->
@@ -61,7 +61,7 @@ import ButtonNavbarComponent from './ButtonNavbarComponent.vue';
 </template>
 
 <style lang="scss">
-  @import '../../assets/colors.scss';
+  @import '../../../assets/colors.scss';
 
   .img-fluid {
     width: 60px;

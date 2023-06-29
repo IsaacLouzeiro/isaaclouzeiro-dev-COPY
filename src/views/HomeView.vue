@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { type PropType } from 'vue'
-  import HomeComponent from '../components/HomeComponent.vue'
+  import HomeComponent from '../components/HomeComponent/HomeComponent.vue'
 
   interface HomeList {
     name: string;

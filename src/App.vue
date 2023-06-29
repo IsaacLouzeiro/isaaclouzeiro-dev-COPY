@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from 'vue';
   import { RouterView } from 'vue-router'
-  import NavbarComponent from './components/shared/NavbarComponent.vue'
+  import NavbarComponent from './components/shared/NavbarComponent/NavbarComponent.vue'
 
   interface HomeList {
     name: string;

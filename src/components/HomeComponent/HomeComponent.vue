@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { type PropType } from 'vue';
-  import ButtonComponent from './shared/ButtonComponent.vue';
-  import TypingTitleComponent from './shared/TypingTitleComponent.vue';
+  import ButtonComponent from '../shared/ButtonComponent.vue';
+  import TypingTitleComponent from './TypingTitleComponent.vue';
 
   interface HomeList {
     name: string;
@@ -28,7 +28,7 @@
 <template>
   <section id="home" class="home-content container">
     <div class="w-100 h-100 row align-items-center justify-content-center">
-      <div class="home-content__text-box col-12 col-md-8 col-lg-7 align-self-end align-self-md-center">
+      <div class="home-content__text-box col-12 col-md-8 col-lg-7 align-self-end align-self-md-center" data-aos="fade-up">
 
         <TypingTitleComponent :title="homeText && homeText[0]" />
         <p>{{ homeText && homeText[1] }}</p>
@@ -43,7 +43,7 @@
         />
       </div>
 
-      <div class="home-content__author-box col-12 col-md-4 text-center">
+      <div class="home-content__author-box col-12 col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
         <img src="@/assets/img/me.jpeg" alt="Author image" class="img-fluid ">
         <h3>{{ homeIsaac && homeIsaac[0] }}</h3>
         <p>{{ homeIsaac && homeIsaac[1] }}</p>
@@ -53,7 +53,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/colors.scss';
+@import '../../assets/colors.scss';
 
 .home-content {
   min-height: 500px;

@@ -19,7 +19,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/colors.scss';
+@import '../../../assets/colors.scss';
 
 li {
   margin: .5rem 0;
