@@ -10,10 +10,16 @@ html, body, #app {
   width: 100vw;
   height: 100vh;
   color: #fff;
+  overflow: hidden;
+}
+
+main {
+  width: 100vw;
+  overflow: auto;
 }
 
 .gradient {
-  background-image: linear-gradient(to bottom, #30B8B2, #004B63);
+  background-image: linear-gradient(to bottom right, #004B63, #30B8B2);
   background-attachment: fixed;
 }
 
@@ -50,6 +56,14 @@ ul {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 75, 99, 0.8);
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */
