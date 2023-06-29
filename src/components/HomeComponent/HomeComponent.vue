@@ -56,6 +56,7 @@
 @import '../../assets/colors.scss';
 
 .home-content {
+  height: 100%;
   min-height: 500px;
 
   @media only screen and (max-width: 767.98px) {
