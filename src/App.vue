@@ -31,6 +31,26 @@
     link: string;
   }
 
+  interface ContactSocial {
+    name: string;
+    link: string;
+    editLink: string;
+    icon: string;
+  }
+
+  interface ContactAlert {
+    errorAlert: string;
+    errorAlertIcon: string;
+    successAlert: string;
+    successAlertIcon: string;
+  }
+
+  interface ContactForm {
+    name: string;
+    email: string;
+    message: string;
+  }
+
   // navbar content
   const navItems = ref<HomeList[]>([
     {
@@ -170,6 +190,47 @@ const workBtn = ref<WorkBtn[]>([
         link: 'https://github.com/IsaacLouzeiro'
     }
 ])
+
+// contact content
+const contactTitle = ref('Contact')
+const contactSocial = ref<ContactSocial[]>([
+  {
+      name: 'Github',
+      link: 'https://github.com/isaaclouzeiro',
+      editLink: 'github.com/isaaclouzeiro',
+      icon: 'fa-brands fa-github'
+  },
+  {
+      name: 'Linkedin',
+      link: 'https://linkedin.com/in/isaac-louzeiro',
+      editLink: 'linkedin.com/in/isaac-louzeiro',
+      icon: 'fa-brands fa-linkedin'
+  },
+  {
+      name: 'Codepen',
+      link: 'https://codepen.io/isaaclouzeiro',
+      editLink: 'codepen.io/isaaclouzeiro',
+      icon: 'fa-brands fa-codepen'
+  },
+  {
+      name: 'Instagram',
+      link: 'https://instagram.com/isaac.louzeiro',
+      editLink: 'instagram.com/isaac.louzeiro',
+      icon: 'fa-brands fa-instagram'
+  }
+])
+const contactForm = ref<ContactForm>({
+  name: 'Name',
+  email: 'E-mail',
+  message: 'Message'
+})
+const contactAlert = ref<ContactAlert>({
+  errorAlert: 'There was an error completing the form',
+  errorAlertIcon: 'fa-triangle-exclamation',
+  successAlert: 'Message was sent successfully',
+  successAlertIcon: 'fa-circle-check'
+})
+const contactBtn = ref('Send Message')
 </script>
 
 <template>
@@ -189,6 +250,12 @@ const workBtn = ref<WorkBtn[]>([
     :work-title="workTitle"
     :work-btn="workBtn"
     :work-projects="workProjects"
+
+    :contact-title="contactTitle"
+    :contact-form="contactForm"
+    :contact-alert="contactAlert"
+    :contact-btn="contactBtn"
+    :contact-social="contactSocial"
   />
 </template>
 

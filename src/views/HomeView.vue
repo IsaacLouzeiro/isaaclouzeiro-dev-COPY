@@ -3,6 +3,7 @@
   import HomeComponent from '../components/HomeComponent/HomeComponent.vue'
   import AboutComponent from '../components/AboutComponent/AboutComponent.vue'
   import WorkComponent from '../components/WorkComponent/WorkComponent.vue'
+  import ContactComponent from '../components/ContactComponent/ContactComponent.vue'
 
   interface HomeList {
     name: string;
@@ -30,6 +31,26 @@
     text: string;
     minText: string;
     link: string;
+  }
+
+  interface ContactSocial {
+    name: string;
+    link: string;
+    editLink: string;
+    icon: string;
+  }
+
+  interface ContactAlert {
+    errorAlert: string;
+    errorAlertIcon: string;
+    successAlert: string;
+    successAlertIcon: string;
+  }
+
+  interface ContactForm {
+    name: string;
+    email: string;
+    message: string;
   }
 
   defineProps({
@@ -71,7 +92,21 @@
     workBtn: {
       type: Array as PropType<WorkBtn[]>,
       required: true
-    }
+    },
+    contactTitle: String,
+    contactSocial: {
+      type: Array as PropType<ContactSocial[]>,
+      required: true
+    },
+    contactForm: {
+      type: Object as PropType<ContactForm>,
+      required: true
+    },
+    contactAlert: {
+      type: Object as PropType<ContactAlert>,
+      required: true
+    },
+    contactBtn: String
   })
 </script>
 
@@ -96,6 +131,14 @@
       :work-title="workTitle"
       :work-btn="workBtn"
       :work-projects="workProjects"
+    />
+
+    <ContactComponent 
+      :contact-title="contactTitle"
+      :contact-social="contactSocial"
+      :contact-form="contactForm"
+      :contact-alert="contactAlert"
+      :contact-btn="contactBtn"
     />
   </main>
 </template>
