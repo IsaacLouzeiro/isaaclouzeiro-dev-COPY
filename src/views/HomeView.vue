@@ -9,6 +9,13 @@
     link: string;
   }
 
+  interface AboutEducation {
+    name: string;
+    institute: string;
+    in: string;
+    out: string;
+  }
+
   defineProps({
     homeText: {
       type: Array as PropType<string[]>,
@@ -21,6 +28,24 @@
     homeIsaac: {
       type: Array as PropType<string[]>,
       required: false
+    },
+    aboutTitle: String,
+    aboutText: {
+      type: Array as PropType<string[]>,
+      required: true
+    },
+    aboutEducationTitle: String,
+    aboutEducation: {
+      type: Array as PropType<AboutEducation[]>,
+      required: true
+    },
+    aboutEducationBtn: {
+      type: Array as PropType<string[]>,
+      required: true
+    },
+    aboutSkills: {
+      type: Array as PropType<string[]>,
+      required: true
     }
   })
 </script>
@@ -33,7 +58,14 @@
       :home-isaac="homeIsaac"
     />
 
-    <AboutComponent />
+    <AboutComponent 
+      :about-title="aboutTitle"
+      :about-text="aboutText"
+      :about-education-title="aboutEducationTitle"
+      :about-education="aboutEducation"
+      :about-education-btn="aboutEducationBtn"
+      :about-skills="aboutSkills"
+    />
   </main>
 </template>
 
