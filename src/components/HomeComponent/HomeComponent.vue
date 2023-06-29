@@ -39,7 +39,15 @@
           :name="item.name"
           :icon="item.icon"
           :link="item.link"
-          class="me-2 mb-2"
+          class="me-2 mb-2 d-none d-md-inline-block"
+        />
+
+        <ButtonComponent
+          v-for="(item, index) in homeButtons"
+          :key="index"
+          :name="item.name"
+          :link="item.link"
+          class="me-2 mb-2 d-inline-block d-md-none"
         />
       </div>
 
