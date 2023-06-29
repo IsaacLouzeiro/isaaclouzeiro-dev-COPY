@@ -23,7 +23,7 @@ import ButtonNavbarComponent from './ButtonNavbarComponent.vue';
     </router-link>
 
     <!-- navbar -->
-    <ul class="nav flex-column d-none d-sm-flex">
+    <ul class="nav flex-column d-none d-sm-flex" id="navbar">
       <ButtonNavbarComponent 
         v-for="(item, index) in navItems"
         :key="index"

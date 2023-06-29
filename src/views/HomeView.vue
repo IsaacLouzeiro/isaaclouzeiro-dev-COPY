@@ -26,7 +26,7 @@
 </script>
 
 <template>
-  <main>
+  <main data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true" tabindex="0">
     <HomeComponent 
       :home-text="homeText"
       :home-buttons="homeButtons"
