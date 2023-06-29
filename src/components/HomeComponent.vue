@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { type PropType } from 'vue';
 import ButtonComponent from './shared/ButtonComponent.vue';
+import TypingTitleComponent from './shared/TypingTitleComponent.vue';
 
 interface HomeButton {
   name: string;
@@ -8,12 +10,18 @@ interface HomeButton {
 }
 
   defineProps({
-    homeText: Array,
-    homeButtons: {
-      type: Array as () => HomeButton[],
+    homeText: {
+      type: Array as PropType<string[]>,
       required: true
     },
-    homeIsaac: Array
+    homeButtons: {
+      type: Array as PropType<HomeButton[]>,
+      required: true
+    },
+    homeIsaac: {
+      type: Array as PropType<string[]>,
+      required: false
+    }
   })
 
 </script>
@@ -21,8 +29,9 @@ interface HomeButton {
 <template>
   <section id="home" class="home-content container">
     <div class="w-100 h-100 row align-items-center justify-content-center">
-      <div class="home-content__text-box col-12 col-md-8 col-lg-7">
-        <h2>{{ homeText && homeText[0] }}</h2>
+      <div class="home-content__text-box col-12 col-md-8 col-lg-7 align-self-end align-self-md-center">
+
+        <TypingTitleComponent :title="homeText && homeText[0]" />
         <p>{{ homeText && homeText[1] }}</p>
 
         <ButtonComponent
@@ -51,21 +60,33 @@ interface HomeButton {
   min-height: 500px;
 
   @media only screen and (max-width: 767.98px) {
-    min-height: 700px;
+    min-height: 600px;
   }
 
   @media only screen and (max-width: 575.98px) {
-    min-height: 800px;
+    min-height: 650px;
   }
 
   &__text-box {
     h2 {
       font-size: 2rem;
+
+      @media only screen and (max-width: 575.98px) {
+        font-size: 1.7rem;
+      }
+
+      @media only screen and (max-width: 397.98px) {
+        font-size: 1.5rem;
+      }
     }
 
     p {
       font-size: 1.2rem;
       color: $color-l-3;
+
+      @media only screen and (max-width: 575.98px) {
+        font-size: 1.1rem;
+      }
     }
   }
 
