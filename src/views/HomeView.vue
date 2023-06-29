@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { type PropType } from 'vue'
   import HomeComponent from '../components/HomeComponent/HomeComponent.vue'
+  import AboutComponent from '../components/AboutComponent/AboutComponent.vue'
 
   interface HomeList {
     name: string;
@@ -31,6 +32,8 @@
       :home-buttons="homeButtons"
       :home-isaac="homeIsaac"
     />
+
+    <AboutComponent />
   </main>
 </template>
 
