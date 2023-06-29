@@ -18,12 +18,12 @@ import ButtonNavbarComponent from './ButtonNavbarComponent.vue';
 <template>
   <nav class="d-flex flex-column align-items-center justify-content-between h-100 py-3 mx-md-2 mx-0">
     <!-- link with logo -->
-    <router-link to="/" class="d-none d-md-inline-block">
+    <router-link to="/" class="d-none d-sm-inline-block">
       <img src="../../assets/img/logo.png" alt="Logo" class="img-fluid">
     </router-link>
 
     <!-- navbar -->
-    <ul class="nav flex-column d-none d-md-flex">
+    <ul class="nav flex-column d-none d-sm-flex">
       <ButtonNavbarComponent 
         v-for="(item, index) in navItems"
         :key="index"
@@ -34,10 +34,10 @@ import ButtonNavbarComponent from './ButtonNavbarComponent.vue';
     </ul>
 
     <!-- object to align navbar -->
-    <div class="d-none d-md-block"><br><br><br></div>
+    <div class="d-none d-sm-block"><br><br><br></div>
 
     <!-- navbar mobile button -->
-    <button class="btn d-inline-block d-md-none btn-bars p-0 m-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    <button class="btn d-inline-block d-sm-none btn-bars p-0 m-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
       <font-awesome-icon :icon="['fas', 'bars']" />
     </button>
 
@@ -71,7 +71,7 @@ import ButtonNavbarComponent from './ButtonNavbarComponent.vue';
     width: 70px;
     position: relative;
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 575.98px) {
       position: absolute;
     }
 
