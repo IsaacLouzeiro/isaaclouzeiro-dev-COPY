@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { type PropType } from 'vue';
-import ButtonComponent from './shared/ButtonComponent.vue';
-import TypingTitleComponent from './shared/TypingTitleComponent.vue';
+  import { type PropType } from 'vue';
+  import ButtonComponent from './shared/ButtonComponent.vue';
+  import TypingTitleComponent from './shared/TypingTitleComponent.vue';
 
-interface HomeButton {
-  name: string;
-  icon: string; 
-  link: string;
-}
+  interface HomeList {
+    name: string;
+    icon: string; 
+    link: string;
+  }
 
   defineProps({
     homeText: {
@@ -15,7 +15,7 @@ interface HomeButton {
       required: true
     },
     homeButtons: {
-      type: Array as PropType<HomeButton[]>,
+      type: Array as PropType<HomeList[]>,
       required: true
     },
     homeIsaac: {
@@ -23,7 +23,6 @@ interface HomeButton {
       required: false
     }
   })
-
 </script>
 
 <template>

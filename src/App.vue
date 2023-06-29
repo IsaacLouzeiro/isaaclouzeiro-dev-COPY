@@ -3,43 +3,43 @@
   import { RouterView } from 'vue-router'
   import NavbarComponent from './components/shared/NavbarComponent.vue'
 
-  interface NavType {
-    target: string;
-    icon: string;
+  interface HomeList {
     name: string;
+    icon: string;
+    link: string;
   }
 
   // navbar content
-  const navItems = ref<NavType[]>([
+  const navItems = ref<HomeList[]>([
     {
-      target: "home",
+      name: "Home",
       icon: "fa-house-chimney",
-      name: "Home"
+      link: "home"
     },
     {
-      target: "about",
+      name: "About",
       icon: "fa-book-open-reader",
-      name: "About"
+      link: "about"
     },
     {
-      target: "work",
+      name: "Work",
       icon: "fa-code",
-      name: "Work"
+      link: "work",
     },
     {
-      target: "contact",
+      name: "Contact",
       icon: "fa-envelope",
-      name: "Contact"
+      link: "contact"
     }
   ])
 
   // home content
-  const homeText = ref([ 
+  const homeText = ref([
     "Welcome to my website.",
     "Recently my passion is creating websites. I'm very curious and constantly searching for new things to learn."
   ])
 
-  const homeButtons = ref([
+  const homeButtons = ref<HomeList[]>([
     {
         name: 'Web Resume',
         icon: 'fa-solid fa-window-maximize',

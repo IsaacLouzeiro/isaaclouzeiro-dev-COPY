@@ -1,13 +1,13 @@
 <script setup lang="ts">
-  interface NavItem {
-    target: string;
-    icon: string; 
+  interface HomeList {
     name: string;
+    icon: string; 
+    link: string;
   }
 
   defineProps({
     navItems: {
-      type: Array as () => NavItem[],
+      type: Array as () => HomeList[],
       required: true
     }
   })
@@ -27,7 +27,7 @@
         :key="index"
         class="nav-item"
       >
-        <a :href="`#${item.target}`" class="btn">
+        <a :href="`#${item.link}`" class="btn">
           <font-awesome-icon :icon="`fa-solid ${item.icon}`" />
         </a>
 
@@ -55,7 +55,7 @@
             v-for="(item, index) in navItems"
             :key="index"
             class="nav-item"
-          ><a :href="`#${item.target}`" class="nav-link"><font-awesome-icon :icon="`fa-solid ${item.icon}`" />{{ item.name }}</a></li>
+          ><a :href="`#${item.link}`" class="nav-link"><font-awesome-icon :icon="`fa-solid ${item.icon}`" />{{ item.name }}</a></li>
         </ul>
       </div>
     </div>
