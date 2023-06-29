@@ -2,6 +2,7 @@
   import { type PropType } from 'vue'
   import HomeComponent from '../components/HomeComponent/HomeComponent.vue'
   import AboutComponent from '../components/AboutComponent/AboutComponent.vue'
+  import WorkComponent from '../components/WorkComponent/WorkComponent.vue'
 
   interface HomeList {
     name: string;
@@ -14,6 +15,21 @@
     institute: string;
     in: string;
     out: string;
+  }
+
+  interface WorkProjects {
+    title: string;
+    github: string;
+    link: string;
+    img: string;
+    about: string;
+  }
+
+  interface WorkBtn {
+    icon: string;
+    text: string;
+    minText: string;
+    link: string;
   }
 
   defineProps({
@@ -46,6 +62,15 @@
     aboutSkills: {
       type: Array as PropType<string[]>,
       required: true
+    },
+    workTitle: String,
+    workProjects: {
+      type: Array as PropType<WorkProjects[]>,
+      required: true
+    },
+    workBtn: {
+      type: Array as PropType<WorkBtn[]>,
+      required: true
     }
   })
 </script>
@@ -65,6 +90,12 @@
       :about-education="aboutEducation"
       :about-education-btn="aboutEducationBtn"
       :about-skills="aboutSkills"
+    />
+
+    <WorkComponent 
+      :work-title="workTitle"
+      :work-btn="workBtn"
+      :work-projects="workProjects"
     />
   </main>
 </template>
