@@ -174,7 +174,7 @@ import ChangeLangComponent from './components/shared/ChangeLangComponent.vue';
     aboutEducation.value = [ 
         { 
             name: 'Curso Superior de Tecnologia, Gestão da Tecnologia da Informação', 
-            institute: 'Faculdade de Tecnologia de Franco da Rocha', 
+            institute: 'Faculdade de Tecnologia de São Paulo', 
             in: '02/2023', 
             out: '12/2025' 
         },
@@ -345,7 +345,7 @@ import ChangeLangComponent from './components/shared/ChangeLangComponent.vue';
     aboutEducation.value = [ 
       { 
           name: 'Technology Degree, Information Technology Management', 
-          institute: 'College of Technology of Franco da Rocha', 
+          institute: 'College of Technology of São Paulo', 
           in: '02/2023', 
           out: '12/2025' 
       },
