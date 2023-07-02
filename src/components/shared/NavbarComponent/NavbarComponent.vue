@@ -44,7 +44,7 @@ import ButtonNavbarComponent from './ButtonNavbarComponent.vue';
     <!-- navbar mobile -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">language</h5>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
         <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
       </div>
       <div class="offcanvas-body px-3">
@@ -85,6 +85,7 @@ import ButtonNavbarComponent from './ButtonNavbarComponent.vue';
     .offcanvas {
       background-color: $color-d-1;
       color: $color-l-1;
+      max-width: 15rem !important;
 
       .offcanvas-body {
         .nav {
