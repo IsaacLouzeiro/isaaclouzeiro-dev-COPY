@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { onMounted, reactive, ref, watch } from 'vue';
+  import { onMounted, reactive, ref } from 'vue';
   import { RouterView } from 'vue-router'
   import NavbarComponent from './components/shared/NavbarComponent/NavbarComponent.vue'
 import ChangeLangComponent from './components/shared/ChangeLangComponent.vue';
