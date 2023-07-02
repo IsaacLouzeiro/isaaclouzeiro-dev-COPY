@@ -13,7 +13,7 @@
     target="_blank"
     class="btn py-2"
   >
-    <font-awesome-icon :icon="`fa-${icontType} ${icon}`" />{{ name }}
+    <font-awesome-icon :icon="`fa-${icontType} ${icon}`" v-if="icon" />{{ name }}
   </a>
 </template>
 

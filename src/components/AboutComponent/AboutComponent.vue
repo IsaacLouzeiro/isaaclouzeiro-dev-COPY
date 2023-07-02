@@ -36,14 +36,14 @@
   <section id="about" class="about-content container">
     <div class="w-100 h-100 row align-items-center">
       <div class="about-content__text-box col-lg-7">
-        <h2>About</h2>
+        <h2>{{ aboutTitle }}</h2>
         <p
           v-for="(text, index) in aboutText"
           :key="index"
         >{{ text }}
         </p>
 
-        <h4>Education</h4>
+        <h4>{{ aboutEducationTitle }}</h4>
         <p 
           v-for="(item, index) in aboutEducation"
           :key="index"
