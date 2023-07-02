@@ -104,10 +104,10 @@ import ChangeLangComponent from './components/shared/ChangeLangComponent.vue';
         icon: 'fa-brands fa-codepen'
     },
     {
-        name: 'Instagram',
-        link: 'https://instagram.com/isaac.louzeiro',
-        editLink: 'instagram.com/isaac.louzeiro',
-        icon: 'fa-brands fa-instagram'
+        name: 'Behance',
+        link: 'https://www.behance.net/isaaclouzeiro',
+        editLink: 'www.behance.net/isaaclouzeiro',
+        icon: 'fa-brands fa-behance'
     }
   ])
   const contactForm = ref<ContactForm>()
