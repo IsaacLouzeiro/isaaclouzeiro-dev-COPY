@@ -73,6 +73,7 @@ import ButtonNavbarComponent from './ButtonNavbarComponent.vue';
 
     @media only screen and (max-width: 575.98px) {
       position: absolute;
+      z-index: 999;
     }
 
     .btn-bars {

@@ -51,7 +51,7 @@ button, .button {
   top: 1.5rem;
   right: 2rem;
   font-size: 2rem;
-  // padding: 0;
+  z-index: 999;
 
   button.lang {
       color: $color-l-1;
